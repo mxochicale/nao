@@ -46,7 +46,6 @@ dpkg -s libboost-dev | grep 'Version'
 Version: 1.54.0.1ubuntu1
 
 
-
 ## Installation in Desktop Machine
 
 
