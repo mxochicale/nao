@@ -10,7 +10,7 @@ MODEL T14
 http://doc.aldebaran.com/2-1/family/body_type.html  
 
 
-## Desktop Machine Features
+## on Ubuntu 14.04 x64
 
 
 ```
@@ -196,3 +196,68 @@ tar -xvzf naoqi-sdk-2.1.4.13-linux64.tar.gz
 ### TODO
 
 * Cross Toolchain 2.1.4 Linux 64  
+
+
+
+
+# on Ubuntu 16.04.4 x64
+
+
+```
+$ cat /proc/version
+Linux version 4.4.0-75-generic (buildd@lgw01-21) (gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.4) ) 
+#96-Ubuntu SMP Thu Apr 20 09:56:33 UTC 2017
+```
+
+```
+$ cat /etc/*release
+DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=16.04
+DISTRIB_CODENAME=xenial
+DISTRIB_DESCRIPTION="Ubuntu 16.04.2 LTS"
+NAME="Ubuntu"
+VERSION="16.04.2 LTS (Xenial Xerus)"
+ID=ubuntu
+ID_LIKE=debian
+PRETTY_NAME="Ubuntu 16.04.2 LTS"
+VERSION_ID="16.04"
+HOME_URL="http://www.ubuntu.com/"
+SUPPORT_URL="http://help.ubuntu.com/"
+BUG_REPORT_URL="http://bugs.launchpad.net/ubuntu/"
+VERSION_CODENAME=xenial
+UBUNTU_CODENAME=xenial
+```
+
+```
+$ gcc --version
+gcc (Ubuntu 5.4.0-6ubuntu1~16.04.4) 5.4.0 20160609
+Copyright (C) 2015 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+```
+
+
+
+
+
+# IP Configuration
+
+```
+$ ip address list
+3: enp5s0f1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether 00:1e:67:56:d0:ab brd ff:ff:ff:ff:ff:ff
+    inet 169.254.52.160/16 brd 169.254.255.255 scope link enp5s0f1
+       valid_lft forever preferred_lft forever
+    inet6 fe80::68b8:b68:9cd2:eed1/64 scope link 
+       valid_lft forever preferred_lft forever
+```
+Renaming network interface on Ubuntu 16.04
+[SOURCE](https://askubuntu.com/questions/783457/renaming-network-interface-in-ubuntu-16-04-with-systemd-fails)
+```
+sudo ifconfig enp5s0f1 down  
+sudo ip link set enp5s0f1 name eth0  
+sudo ifconfig eth0 up 
+```
+
+
+
