@@ -58,12 +58,20 @@ cd && mkdir naosoftware && cd naosoftware
 Sign in and downdload Choregraphe 2.1.4 Linux 64 Binaries
 https://community.ald.softbankrobotics.com/en/resources/software/robot/nao-2
 
+For Python SDK and C++ SDK and other version of Choregraphe go to 
+https://developer.softbankrobotics.com/us-en/downloads/nao-v5-v4
+
 
 
 ```
 tar -xvzf choregraphe-suite-2.1.4.13-linux64.tar.gz
 rm choregraphe-suite-2.1.4.13-linux64.tar.gz
 ```
+
+When you launch Choregraphe, the license key is requested
+[ref](https://developer.softbankrobotics.com/us-en/downloads/nao-v5-v4). 
+Please copy and paste the following key:
+654e-4564-153c-6518-2f44-7562-206e-4c60-5f47-5f45
 
 
 ```
