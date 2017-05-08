@@ -71,6 +71,17 @@ cd choregraphe-suite-2.1.4.13-linux64
  ./choregraphe
 ```
 
+# Ubuntu Local Link
+1. Edit connections  
+2. Add Ethernet Connection Type 
+3. Select the tab IPv4-Settings, and change the Method to Link-Local Only.
+   (Change connection name: NAO)
+   and tick Require IPv4 addressing for this connection to complete 
+4. Click on Save, and close the menu.
+
+
+http://doc.aldebaran.com/2-1/nao/connectivity.html#how-to-ubuntu-and-local-link
+
 # IP Configuration
 
 
