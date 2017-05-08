@@ -157,6 +157,8 @@ $ ip address list
 tar -xvzf pynaoqi-python2.7-2.1.4.13-linux64.tar.gz
 rm pynaoqi-python2.7-2.1.4.13-linux64.tar.gz
 echo 'export PYTHONPATH=${PYTHONPATH}:/home/map479-admin/naosoftware/pynaoqi-python2.7-2.1.4.13-linux64' >> ~/.bashrc
+echo 'export LD_LIBRARY_PATH="/home/map479-admin/naosoftware/naoqi-sdk-2.1.4.13-linux64:$LD_LIBRARY_PATH"' >> ~/.bashrc
+sudo ldconfig
 source ~/.bashrc
 ```
 
@@ -180,6 +182,16 @@ source ~/.bashrc
 ```
 
 By the way, libboost-dev Version is 1.54.0.1ubuntu1
+
+then I tried this but 
+```
+sudo cp -a /home/map479-admin/naosoftware/naoqi-sdk-2.1.4.13-linux64/lib/libboost_*.so.* /home/map479-admin/naosoftware/naoqi-sdk-2.1.4.13-linux64/
+```
+but it still the same error:
+
+Segmentation fault (core dumped)
+
+
 
 
 
