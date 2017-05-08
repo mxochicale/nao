@@ -251,13 +251,44 @@ $ ip address list
     inet6 fe80::68b8:b68:9cd2:eed1/64 scope link 
        valid_lft forever preferred_lft forever
 ```
-Renaming network interface on Ubuntu 16.04
+You might rename the network interface on Ubuntu 16.04
 [SOURCE](https://askubuntu.com/questions/783457/renaming-network-interface-in-ubuntu-16-04-with-systemd-fails)
+
+
+
+
+## Installation of Python 2.7 SDK 2.1.4 Linux 64
 ```
-sudo ifconfig enp5s0f1 down  
-sudo ip link set enp5s0f1 name eth0  
-sudo ifconfig eth0 up 
+cd ~/naosoftware/
+tar -xvzf naoqi-sdk-2.1.4.13-linux64.tar.gz 
+tar -xvzf pynaoqi-python2.7-2.1.4.13-linux64.tar.gz
+rm pynaoqi-python2.7-2.1.4.13-linux64.tar.gz
+echo 'export PYTHONPATH=${PYTHONPATH}:/home/map479/naosoftware/pynaoqi-python2.7-2.1.4.13-linux64' >> ~/.bashrc
+echo 'export LD_LIBRARY_PATH="/home/map479/naosoftware/naoqi-sdk-2.1.4.13-linux64:$LD_LIBRARY_PATH"' >> ~/.bashrc
+sudo ldconfig
+sudo cp -a /home/map479/naosoftware/naoqi-sdk-2.1.4.13-linux64/lib/libboost_*.so.* /home/map479/naosoftware/naoqi-sdk-2.1.4.13-linux64/
+source ~/.bashrc
 ```
+[Source](https://community.ald.softbankrobotics.com/en/forum/import-issue-pynaoqi-214-ubuntu-7956)
+
+
+# THIS IS NOT NEECESARY -- install boost 1.55.0 
+```
+cd && mkdir boost1.55.0 && cd boost1.55.0 
+wget -O boost_1_55_0.tar.gz http://sourceforge.net/projects/boost/files/boost/1.55.0/boost_1_55_0.tar.gz/download
+tar xzvf boost_1_55_0.tar.gz
+cd boost_1_55_0/
+```
+./bootstrap.sh --prefix=/usr/local
+./b2
+sudo ./b2 install 
+[Source](http://stackoverflow.com/questions/12578499/how-to-install-boost-on-ubuntu)
+
+
+
+
+
+
 
 
 
