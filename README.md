@@ -269,7 +269,7 @@ You might rename the network interface on Ubuntu 16.04
 
 
 
-## Installation of Python 2.7 SDK 2.1.4 Linux 64
+###  Installation of Python 2.7 SDK 2.1.4 Linux 64
 ```
 cd ~/naosoftware/
 tar -xvzf naoqi-sdk-2.1.4.13-linux64.tar.gz 
@@ -284,7 +284,7 @@ source ~/.bashrc
 [Source](https://community.ald.softbankrobotics.com/en/forum/import-issue-pynaoqi-214-ubuntu-7956)
 
 
-# THIS IS NOT NEECESARY -- install boost 1.55.0 
+#### THIS IS NOT NEECESARY -- install boost 1.55.0 
 ```
 cd && mkdir boost1.55.0 && cd boost1.55.0 
 wget -O boost_1_55_0.tar.gz http://sourceforge.net/projects/boost/files/boost/1.55.0/boost_1_55_0.tar.gz/download
@@ -293,13 +293,24 @@ cd boost_1_55_0/
 ```
 ./bootstrap.sh --prefix=/usr/local
 ./b2
-sudo ./b2 install 
+NO sudo ./b2 install 
 [Source](http://stackoverflow.com/questions/12578499/how-to-install-boost-on-ubuntu)
 
 
 
 
+Using Python 2.7.13
 
+```
+cd /usr/src
+sudo su
+wget https://www.python.org/ftp/python/2.7.13/Python-2.7.13.tgz
+tar xzf Python-2.7.13.tgz
+rm -rf Python-2.7.13.tgz
+cd Python-2.7.13
+./configure
+make altinstall #make altinstall is used to prevent replacing the default python binary file /usr/bin/python.
+```
 
 
 
