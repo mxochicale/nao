@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2.7
 #
 # This program use ALTextToSpeech proxy defined as tts in order to say
 # whatever is in between the quotes tts.say("?????????")
@@ -22,6 +22,9 @@ except Exception,e:
     print "Could not create proxy to ALTextToSpeech"
     print "Error was: ",e
     sys.exit(1)
+
+
+print sys.version_info
 
 
 tts.setVolume(0.9)  ##Volume set to 90%

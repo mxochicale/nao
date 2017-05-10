@@ -212,9 +212,10 @@ tar -xvzf naoqi-sdk-2.1.4.13-linux64.tar.gz
 
 
 
-# on Ubuntu 16.04.4 x64
+# Usage on Ubuntu 16.04.4 x64
 
 
+#### Machine features:
 ```
 $ cat /proc/version
 Linux version 4.4.0-75-generic (buildd@lgw01-21) (gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.4) ) 
@@ -250,9 +251,25 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
 
 
+#### Network Connection 
 
 
-# IP Configuration
+IP Configuration
+
+
+Go to network connections and select connect to NAO, once established the connection, 
+you can run 
+```
+$ ip address list
+3: enp5s0f1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether 00:1e:67:56:d0:ab brd ff:ff:ff:ff:ff:ff
+    inet 169.254.52.160/16 brd 169.254.255.255 scope link enp5s0f1
+       valid_lft forever preferred_lft forever
+    inet6 fe80::d94b:6ff:3620:1618/64 scope link 
+       valid_lft forever preferred_lft forever
+```
+
+
 
 ```
 $ ip address list
@@ -260,16 +277,20 @@ $ ip address list
     link/ether 00:1e:67:56:d0:ab brd ff:ff:ff:ff:ff:ff
     inet 169.254.52.160/16 brd 169.254.255.255 scope link enp5s0f1
        valid_lft forever preferred_lft forever
-    inet6 fe80::68b8:b68:9cd2:eed1/64 scope link 
+    inet6 fe80::68b8:b68:9cd2:eed1/64 scope link
        valid_lft forever preferred_lft forever
 ```
-You might rename the network interface on Ubuntu 16.04
+
+
+
+
+
+In case that you need to rename the network interface on Ubuntu 16.04, you can follow this instructions:
 [SOURCE](https://askubuntu.com/questions/783457/renaming-network-interface-in-ubuntu-16-04-with-systemd-fails)
 
 
 
-
-###  Installation of Python 2.7 SDK 2.1.4 Linux 64
+###  Installation of pynaoqo --- Python 2.7 SDK 2.1.4 Linux 64
 ```
 cd ~/naosoftware/
 tar -xvzf naoqi-sdk-2.1.4.13-linux64.tar.gz 
