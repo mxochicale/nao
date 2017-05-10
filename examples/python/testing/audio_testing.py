@@ -1,5 +1,8 @@
 #!/usr/bin/env python2.7
 #
+#
+# Tested with python 2.7.13 on ubuntu 16.04 on  Wed 10 May 23:52:06 BST 2017 @bhamuk
+#
 # This program reproduce audio files using loadFile
 #
 #

@@ -1,4 +1,7 @@
-#!/usr/bin/env python2.7
+#!/usr/bin/env python
+#
+#
+# Tested with python 2.7.13 on ubuntu 16.04 on  Wed 10 May 23:52:06 BST 2017 @bhamuk
 #
 # This program use ALTextToSpeech proxy defined as tts in order to say
 # whatever is in between the quotes tts.say("?????????")
@@ -9,6 +12,8 @@
 # Miguel P. Xochicale [http://mxochicale.github.io]
 # Doctoral Researcher in Human-Robot Interaction
 # University of Birmingham, U.K. (2014-2018)
+#
+#
 
 import sys
 from naoqi import ALProxy

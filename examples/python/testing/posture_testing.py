@@ -1,8 +1,12 @@
 #!/usr/bin/env python2.7
 #
 #
+#
+# Tested with python 2.7.13 on ubuntu 16.04 on  Wed 10 May 23:52:06 BST 2017 @bhamuk
+#
+#
 # This program test the following predefined postures:
-# Crouch, SitRelax, Stand, StandInit, StandZero. 
+# Crouch, SitRelax, Stand, StandInit, StandZero.
 # A posture for NAO is a unique configuration for its joints [1]
 # [1] http://doc.aldebaran.com/2-1/naoqi/motion/alrobotposture.html
 #
