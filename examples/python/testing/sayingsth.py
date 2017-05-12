@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 #
 #
-# Tested with python 2.7.13 on ubuntu 16.04 on  Wed 10 May 23:52:06 BST 2017 @bhamuk
 #
 # This program use ALTextToSpeech proxy defined as tts in order to say
 # whatever is in between the quotes tts.say("?????????")
 #
+# MACHINE: Ubuntu 16.04x64 with python 2.7.13 
 # NAO V4. Body Type: T14
 # SOFTWARE: naoqi 2.1.4.13 with python_naoqi-2.1.4.13-linux64
 #

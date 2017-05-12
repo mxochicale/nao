@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<package uuid="openday01_naoqi21413-5c5d10">
+ <names>
+  <name lang="en_US">openday01_naoqi21413</name>
+ </names>
+ <descriptionLanguages>
+  <language>en_US</language>
+ </descriptionLanguages>
+ <contents>
+  <behaviorContent path="openday01">
+   <nature></nature>
+   <permissions/>
+  </behaviorContent>
+ </contents>
+</package>

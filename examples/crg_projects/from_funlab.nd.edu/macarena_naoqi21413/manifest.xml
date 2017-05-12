@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<package uuid="macarena_naoqi21413-ea5ba1">
+ <names>
+  <name lang="en_US">macarena_naoqi21413</name>
+ </names>
+ <descriptionLanguages>
+  <language>en_US</language>
+ </descriptionLanguages>
+ <contents>
+  <behaviorContent path="macarena">
+   <nature></nature>
+   <permissions/>
+  </behaviorContent>
+ </contents>
+</package>

@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<package uuid="macarena-03f7a4">
+<package uuid="openday00_naoqi21413-32296d">
  <names>
-  <name lang="en_US">macarena</name>
+  <name lang="en_US">openday00_naoqi21413</name>
  </names>
  <descriptionLanguages>
   <language>en_US</language>
  </descriptionLanguages>
  <contents>
-  <behaviorContent path="macarena">
+  <behaviorContent path="openday00">
    <nature></nature>
    <permissions/>
   </behaviorContent>

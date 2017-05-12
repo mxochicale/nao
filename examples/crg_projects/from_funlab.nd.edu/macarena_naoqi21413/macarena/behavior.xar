@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <ChoregrapheProject xmlns="http://www.aldebaran-robotics.com/schema/choregraphe/project.xsd" xar_version="3">
-    <Box name="root" id="-1" tooltip="Root box of Choregraphe&apos;s project. Highest level possible." x="0" y="0">
+    <Box name="root" id="-1" localization="8" tooltip="Root box of Choregraphe&apos;s project. Highest level possible." x="0" y="0">
         <bitmap>media/images/box/root.png</bitmap>
         <script language="4">
             <content>
@@ -15,7 +15,7 @@
             <BehaviorLayer name="behavior_layer1">
                 <BehaviorKeyframe name="keyframe1" index="1">
                     <Diagram>
-                        <Box name="Macarena" id="3" tooltip="This box is empty (contains a single motion layer with no motor position&#x0A;defined in it) and should be used to create any animation you would like." x="121" y="255">
+                        <Box name="Macarena" id="3" localization="8" tooltip="This box is empty (contains a single motion layer with no motor position&#x0A;defined in it) and should be used to create any animation you would like." x="179" y="271">
                             <bitmap>media/images/box/movement/move.png</bitmap>
                             <script language="4">
                                 <content>
@@ -26,11 +26,11 @@
                             <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" />
                             <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" />
                             <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="4" />
-                            <Timeline enable="1" fps="25" start_frame="0" end_frame="-1" size="600">
+                            <Timeline enable="1" fps="25" start_frame="1" end_frame="-1" size="432">
                                 <BehaviorLayer name="behavior_layer1">
                                     <BehaviorKeyframe name="keyframe1" index="1">
                                         <Diagram>
-                                            <Box name="Twinkle" id="1" tooltip="NAO&apos;s selected LEDs flash on and off during the time defined in parameters." x="255" y="104">
+                                            <Box name="Twinkle" id="1" localization="8" tooltip="NAO&apos;s selected LEDs flash on and off during the time defined in parameters." x="255" y="104">
                                                 <bitmap>media/images/box/interaction/LED.png</bitmap>
                                                 <script language="4">
                                                     <content>
@@ -62,7 +62,7 @@
                                                     <BehaviorLayer name="behavior_layer1">
                                                         <BehaviorKeyframe name="keyframe1" index="1">
                                                             <Diagram>
-                                                                <Box name="Set LEDs" id="3" tooltip="Set the intensity of the LEDs of a given group." x="176" y="119">
+                                                                <Box name="Set LEDs" id="3" localization="8" tooltip="Set the intensity of the LEDs of a given group." x="176" y="119">
                                                                     <bitmap>media/images/box/interaction/LED.png</bitmap>
                                                                     <script language="4">
                                                                         <content>
@@ -105,7 +105,7 @@
                                                                     <Parameter name="Intensity (%)" inherits_from_parent="0" content_type="1" value="100" default_value="100" min="0" max="100" tooltip="Intensity all the LEDs from the group is set to." id="5" />
                                                                     <Parameter name="Time to flash on (s)" inherits_from_parent="1" content_type="2" value="0.5" default_value="0.5" min="0.1" max="2" tooltip="How much time to go to the intensity in seconds." id="6" />
                                                                 </Box>
-                                                                <Box name="Set LEDs" id="1" tooltip="Set the intensity of the LEDs of a given group." x="180" y="262">
+                                                                <Box name="Set LEDs" id="1" localization="8" tooltip="Set the intensity of the LEDs of a given group." x="180" y="262">
                                                                     <bitmap>media/images/box/interaction/LED.png</bitmap>
                                                                     <script language="4">
                                                                         <content>
@@ -148,7 +148,7 @@
                                                                     <Parameter name="Intensity (%)" inherits_from_parent="0" content_type="1" value="0" default_value="100" min="0" max="100" tooltip="Intensity all the LEDs from the group is set to." id="5" />
                                                                     <Parameter name="Time to flash off (s)" inherits_from_parent="1" content_type="2" value="0.5" default_value="0.5" min="0.1" max="2" tooltip="How much time to go to the intensity in seconds." id="6" />
                                                                 </Box>
-                                                                <Box name="Wait" id="2" tooltip="Wait a moment before sending a signal on the output. The wait can be stopped any&#x0A;time. You may restart it any time, and it will start again." x="172" y="16">
+                                                                <Box name="Wait" id="2" localization="8" tooltip="Wait a moment before sending a signal on the output. The wait can be stopped any&#x0A;time. You may restart it any time, and it will start again." x="172" y="16">
                                                                     <bitmap>media/images/box/wait.png</bitmap>
                                                                     <script language="4">
                                                                         <content>
@@ -195,7 +195,7 @@ class MyClass(GeneratedClass):
                                                                     <Output name="timerOutput" type="1" type_size="1" nature="1" inner="0" tooltip="Send a bang once time set in parameters is ellapsed, or if the box is stopped." id="4" />
                                                                     <Parameter name="Animation duration (s)" inherits_from_parent="1" content_type="2" value="10" default_value="10" min="0.1" max="5000" tooltip="Duration of the animation of LEDs." id="5" />
                                                                 </Box>
-                                                                <Box name="Set LEDs" id="4" tooltip="Set the intensity of the LEDs of a given group." x="308" y="12">
+                                                                <Box name="Set LEDs" id="4" localization="8" tooltip="Set the intensity of the LEDs of a given group." x="308" y="12">
                                                                     <bitmap>media/images/box/interaction/LED.png</bitmap>
                                                                     <script language="4">
                                                                         <content>
@@ -816,7 +816,7 @@ class MyClass(GeneratedClass):
                                 </ActuatorList>
                             </Timeline>
                         </Box>
-                        <Box name="Say" id="1" tooltip="Say some text. Note that you must open the box to enter the text." x="150" y="108">
+                        <Box name="Say" id="1" localization="8" tooltip="Say some text. Note that you must open the box to enter the text." x="150" y="108">
                             <bitmap>media/images/box/interaction/say.png</bitmap>
                             <script language="4">
                                 <content>
@@ -852,7 +852,7 @@ class MyClass(GeneratedClass):
                                 <BehaviorLayer name="behavior_layer1">
                                     <BehaviorKeyframe name="keyframe1" index="1">
                                         <Diagram>
-                                            <Box name="Say Text" id="2" tooltip="Say the text received on its input." x="422" y="65">
+                                            <Box name="Say Text" id="2" localization="8" tooltip="Say the text received on its input." x="422" y="65">
                                                 <bitmap>media/images/box/interaction/say.png</bitmap>
                                                 <script language="4">
                                                     <content>
@@ -870,7 +870,7 @@ class MyClass(GeneratedClass):
     def onLoad(self):
         self.bIsRunning = False
         self.ids = []
-        
+
     def onUnload(self):
         for id in self.ids:
             try:
@@ -910,11 +910,12 @@ class MyClass(GeneratedClass):
                                                 <Parameter name="Voice shaping (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="150" tooltip='Used to modify at runtime the voice feature (tone, speed). In a slighty&#x0A;different way than pitch and speed, it gives a kind of &quot;gender or age&#x0A;modification&quot; effect.&#x0A;&#x0A;For instance, a quite good male derivation of female voice can be&#x0A;obtained setting this parameter to 78%.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the&#x0A;speed parameter. For example, if you want to decrease by 20% the voice&#x0A;shaping, you will have to increase by 20% the speed to keep a constant&#x0A;average speed.' id="5" />
                                                 <Parameter name="Speed (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="200" tooltip="Changes the speed of the voice.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the voice&#x0A;shaping parameter. For example, if you want to increase by 20% the speed, you&#x0A;will have to decrease by 20% the voice shaping to keep a constant average&#x0A;speed." id="6" />
                                             </Box>
-                                            <Box name="Localized Text" id="5" tooltip="Send on the output the text associated with the robot&apos;s current voice language.&#x0A;You can display and edit the text associated with any language by&#x0A;selecting the language in the combobox.&#x0A;&#x0A;!!Warning!! The text sent on the output is NOT the displayed one but the one&#x0A;associated with the robot&apos;s current voice language." plugin="localizationbox_plugin" x="114" y="68">
+                                            <Box name="Localized Text" id="5" localization="8" tooltip="Send on the output the text associated with the robot&apos;s current voice language.&#x0A;You can display and edit the text associated with any language by&#x0A;selecting the language in the combobox.&#x0A;&#x0A;!!Warning!! The text sent on the output is NOT the displayed one but the one&#x0A;associated with the robot&apos;s current voice language." plugin="localizationbox_plugin" x="114" y="68">
                                                 <bitmap>media/images/box/interaction/vocabulary.png</bitmap>
                                                 <script language="4">
                                                     <content>
-                                                        <![CDATA[class MyClass(GeneratedClass):
+                                                        <![CDATA[# /!\ Generated content. Do not edit!
+class MyClass(GeneratedClass):
 	def __init__(self):
 		try: # disable autoBind
 			GeneratedClass.__init__(self, False)
@@ -923,25 +924,27 @@ class MyClass(GeneratedClass):
 
 		self.tts = ALProxy("ALTextToSpeech")
 		self.sentences = {
-			"Chinese" : " 你好 ",
-			"English" : " Dance the mack-ahh-ray-na with me! ",
-			"French" : " Bonjour ",
+			"Arabic" : "  ",
+			"Czech" : "  ",
+			"Danish" : "  ",
 			"German" : " Hallo ",
+			"Greek" : "  ",
+			"English" : " Dance the mack-ahh-ray-na with me! ",
+			"Spanish" : " Hola ",
+			"Finnish" : "  ",
+			"French" : " Bonjour ",
 			"Italian" : " Ciao ",
 			"Japanese" : " こんにちは ",
 			"Korean" : " 안녕하세요 ",
-			"Portuguese" : " Olá ",
-			"Brazilian" : "  ",
-			"Spanish" : " Hola ",
-			"Arabic" : "  ",
-			"Polish" : "  ",
-			"Czech" : "  ",
 			"Dutch" : "  ",
-			"Danish" : "  ",
-			"Finnish" : "  ",
-			"Swedish" : "  ",
+			"Norwegian" : "  ",
+			"Polish" : "  ",
+			"Brazilian" : "  ",
+			"Portuguese" : " Olá ",
 			"Russian" : "  ",
-			"Turkish" : "  "
+			"Swedish" : "  ",
+			"Turkish" : "  ",
+			"Chinese" : "  "
 		}
 
 	def onInput_onStart(self):
@@ -950,26 +953,70 @@ class MyClass(GeneratedClass):
 </content>
                                                 </script>
                                                 <pluginContent>
-                                                    <chinese>你好</chinese>
-                                                    <english>Dance the mack-ahh-ray-na with me!</english>
-                                                    <french>Bonjour</french>
-                                                    <german>Hallo</german>
-                                                    <italian>Ciao</italian>
-                                                    <japanese>こんにちは</japanese>
-                                                    <korean>안녕하세요</korean>
-                                                    <portuguese>Olá</portuguese>
-                                                    <brazilian></brazilian>
-                                                    <spanish>Hola</spanish>
-                                                    <arabic></arabic>
-                                                    <polish></polish>
-                                                    <czech></czech>
-                                                    <dutch></dutch>
-                                                    <danish></danish>
-                                                    <finnish></finnish>
-                                                    <swedish></swedish>
-                                                    <russian></russian>
-                                                    <turkish></turkish>
-                                                    <language>1</language>
+                                                    <arabic>
+                                                        <![CDATA[]]>
+</arabic>
+                                                    <czech>
+                                                        <![CDATA[]]>
+</czech>
+                                                    <danish>
+                                                        <![CDATA[]]>
+</danish>
+                                                    <german>
+                                                        <![CDATA[Hallo]]>
+</german>
+                                                    <greek>
+                                                        <![CDATA[]]>
+</greek>
+                                                    <english>
+                                                        <![CDATA[Dance the mack-ahh-ray-na with me!]]>
+</english>
+                                                    <spanish>
+                                                        <![CDATA[Hola]]>
+</spanish>
+                                                    <finnish>
+                                                        <![CDATA[]]>
+</finnish>
+                                                    <french>
+                                                        <![CDATA[Bonjour]]>
+</french>
+                                                    <italian>
+                                                        <![CDATA[Ciao]]>
+</italian>
+                                                    <japanese>
+                                                        <![CDATA[こんにちは]]>
+</japanese>
+                                                    <korean>
+                                                        <![CDATA[안녕하세요]]>
+</korean>
+                                                    <dutch>
+                                                        <![CDATA[]]>
+</dutch>
+                                                    <norwegian>
+                                                        <![CDATA[]]>
+</norwegian>
+                                                    <polish>
+                                                        <![CDATA[]]>
+</polish>
+                                                    <brazilian>
+                                                        <![CDATA[]]>
+</brazilian>
+                                                    <portuguese>
+                                                        <![CDATA[Olá]]>
+</portuguese>
+                                                    <russian>
+                                                        <![CDATA[]]>
+</russian>
+                                                    <swedish>
+                                                        <![CDATA[]]>
+</swedish>
+                                                    <turkish>
+                                                        <![CDATA[]]>
+</turkish>
+                                                    <chinese>
+                                                        <![CDATA[]]>
+</chinese>
+                                                    <language>9</language>
                                                 </pluginContent>
                                                 <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                 <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />

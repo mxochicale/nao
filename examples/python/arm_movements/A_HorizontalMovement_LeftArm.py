@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 #
 #
-#
-#
 # This program move the Left Arm of Nao in Horizontal Movement "LShoulderRoll"
 # from =90 to 0 degrees. It also plays a sound in each of the repetitions
 # to let the person know about the #REPETITIONS = 1
@@ -10,6 +8,7 @@
 #
 # [1] http://doc.aldebaran.com/1-14/naoqi/motion/control-joint-api.html?highlight=angleinterpolation#ALMotionProxy::angleInterpolation
 #
+# MACHINE: Ubuntu 16.04_x64 with Python 2.7.13 
 # MACHINE: Ubuntu 14.04_x64 with Python 2.7.6
 # NAO VERSION: V4 T14
 # NAOQI: naoqi 2.1.4.13 with python_naoqi-2.1.4.13-linux64
