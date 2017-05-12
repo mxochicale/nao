@@ -58,7 +58,7 @@ cd && mkdir naosoftware && cd naosoftware
 Sign in and downdload Choregraphe 2.1.4 Linux 64 Binaries
 https://community.ald.softbankrobotics.com/en/resources/software/robot/nao-2
 
-For Python SDK and C++ SDK and other version of Choregraphe go to 
+For Python SDK and C++ SDK and other version of Choregraphe go to
 https://developer.softbankrobotics.com/us-en/downloads/nao-v5-v4
 
 
@@ -69,7 +69,7 @@ rm choregraphe-suite-2.1.4.13-linux64.tar.gz
 ```
 
 When you launch Choregraphe, the license key is requested
-[ref](https://developer.softbankrobotics.com/us-en/downloads/nao-v5-v4). 
+[ref](https://developer.softbankrobotics.com/us-en/downloads/nao-v5-v4).
 Please copy and paste the following key:
 654e-4564-153c-6518-2f44-7562-206e-4c60-5f47-5f45
 
@@ -81,10 +81,10 @@ cd choregraphe-suite-2.1.4.13-linux64
 
 # Ubuntu Local Link
 1. Edit connections  
-2. Add Ethernet Connection Type 
+2. Add Ethernet Connection Type
 3. Select the tab IPv4-Settings, and change the Method to Link-Local Only.
    (Change connection name: NAO)
-   and tick Require IPv4 addressing for this connection to complete 
+   and tick Require IPv4 addressing for this connection to complete
 4. Click on Save, and close the menu.
 
 
@@ -95,6 +95,11 @@ http://doc.aldebaran.com/2-1/nao/connectivity.html#how-to-ubuntu-and-local-link
 
 Add a rule for the firewall
 
+Using ufw (Uncomplicated Firewall which is a frontend for host-based firewalls),
+you have to enable a firewall in order to allow incoming
+SSH from specific subnet IP Address (169.254.0.0/16)
+
+
 ```
 $ sudo ufw allow in on eth0 from 169.254.0.0/16
 ```
@@ -103,6 +108,27 @@ $ ufw status
 
   Anywhere on eth0           ALLOW       169.254.0.0/16
 ```
+
+
+```
+ufw enable
+```
+Firewall is active and enabled on system startup
+
+```
+root@EEE-003124:/home/map479-admin# ufw reset
+Resetting all rules to installed defaults. Proceed with operation (y|n)? y
+Backing up 'after.rules' to '/etc/ufw/after.rules.20161217_223214'
+Backing up 'user6.rules' to '/lib/ufw/user6.rules.20161217_223214'
+Backing up 'user.rules' to '/lib/ufw/user.rules.20161217_223214'
+Backing up 'before.rules' to '/etc/ufw/before.rules.20161217_223214'
+Backing up 'after6.rules' to '/etc/ufw/after6.rules.20161217_223214'
+Backing up 'before6.rules' to '/etc/ufw/before6.rules.20161217_223214'
+```
+https://www.cyberciti.biz/faq/ubuntu-server-disable-firewall/
+
+
+
 
 
 ```
@@ -183,7 +209,7 @@ source ~/.bashrc
 
 By the way, libboost-dev Version is 1.54.0.1ubuntu1
 
-then I tried this but 
+then I tried this but
 ```
 sudo cp -a /home/map479-admin/naosoftware/naoqi-sdk-2.1.4.13-linux64/lib/libboost_*.so.* /home/map479-admin/naosoftware/naoqi-sdk-2.1.4.13-linux64/
 ```
@@ -218,7 +244,7 @@ tar -xvzf naoqi-sdk-2.1.4.13-linux64.tar.gz
 #### Machine features:
 ```
 $ cat /proc/version
-Linux version 4.4.0-75-generic (buildd@lgw01-21) (gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.4) ) 
+Linux version 4.4.0-75-generic (buildd@lgw01-21) (gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.4) )
 #96-Ubuntu SMP Thu Apr 20 09:56:33 UTC 2017
 ```
 
@@ -251,21 +277,21 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
 
 
-#### Network Connection 
+#### Network Connection
 
 
 IP Configuration
 
 
-Go to network connections and select connect to NAO, once established the connection, 
-you can run 
+Go to network connections and select connect to NAO, once established the connection,
+you can run
 ```
 $ ip address list
 3: enp5s0f1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
     link/ether 00:1e:67:56:d0:ab brd ff:ff:ff:ff:ff:ff
     inet 169.254.52.160/16 brd 169.254.255.255 scope link enp5s0f1
        valid_lft forever preferred_lft forever
-    inet6 fe80::d94b:6ff:3620:1618/64 scope link 
+    inet6 fe80::d94b:6ff:3620:1618/64 scope link
        valid_lft forever preferred_lft forever
 ```
 
@@ -293,7 +319,7 @@ In case that you need to rename the network interface on Ubuntu 16.04, you can f
 ###  Installation of pynaoqo --- Python 2.7 SDK 2.1.4 Linux 64
 ```
 cd ~/naosoftware/
-tar -xvzf naoqi-sdk-2.1.4.13-linux64.tar.gz 
+tar -xvzf naoqi-sdk-2.1.4.13-linux64.tar.gz
 tar -xvzf pynaoqi-python2.7-2.1.4.13-linux64.tar.gz
 rm pynaoqi-python2.7-2.1.4.13-linux64.tar.gz
 echo 'export PYTHONPATH=${PYTHONPATH}:/home/map479/naosoftware/pynaoqi-python2.7-2.1.4.13-linux64' >> ~/.bashrc
@@ -305,16 +331,16 @@ source ~/.bashrc
 [Source](https://community.ald.softbankrobotics.com/en/forum/import-issue-pynaoqi-214-ubuntu-7956)
 
 
-#### THIS IS NOT NEECESARY -- install boost 1.55.0 
+#### THIS IS NOT NEECESARY -- install boost 1.55.0
 ```
-cd && mkdir boost1.55.0 && cd boost1.55.0 
+cd && mkdir boost1.55.0 && cd boost1.55.0
 wget -O boost_1_55_0.tar.gz http://sourceforge.net/projects/boost/files/boost/1.55.0/boost_1_55_0.tar.gz/download
 tar xzvf boost_1_55_0.tar.gz
 cd boost_1_55_0/
 ```
 ./bootstrap.sh --prefix=/usr/local
 ./b2
-NO sudo ./b2 install 
+NO sudo ./b2 install
 [Source](http://stackoverflow.com/questions/12578499/how-to-install-boost-on-ubuntu)
 
 
@@ -332,7 +358,3 @@ cd Python-2.7.13
 ./configure
 make altinstall #make altinstall is used to prevent replacing the default python binary file /usr/bin/python.
 ```
-
-
-
-
