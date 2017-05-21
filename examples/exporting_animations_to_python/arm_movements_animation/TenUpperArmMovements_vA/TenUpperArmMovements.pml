@@ -5,7 +5,9 @@
         <BehaviorDescription name="behavior" src="behavior_1" xar="behavior.xar" />
     </BehaviorDescriptions>
     <Dialogs />
-    <Resources />
+    <Resources>
+        <File name="README" src="README.md" />
+    </Resources>
     <Topics />
     <IgnoredPaths />
 </Package>

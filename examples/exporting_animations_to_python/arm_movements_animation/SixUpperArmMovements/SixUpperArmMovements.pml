@@ -10,6 +10,7 @@
         <File name="" src="SixUpperArmMovements/.metadata" />
         <File name="SixUpperArmMovements" src="SixUpperArmMovements/SixUpperArmMovements.pml" />
         <File name="manifest" src="SixUpperArmMovements/manifest.xml" />
+        <File name="README" src="README.md" />
     </Resources>
     <Topics />
     <IgnoredPaths />
