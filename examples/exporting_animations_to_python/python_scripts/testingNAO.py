@@ -136,7 +136,7 @@ upArms = [
 ##############################################################
 
 
-ArmMovementList = [leftArmMovementList2]
+ArmMovementList = [leftArmMovementList2, upArms]
 # ArmMovementList = [upArms]
 # ArmMovementList = [UpperArmMovements]
 
