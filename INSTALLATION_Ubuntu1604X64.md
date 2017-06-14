@@ -1,4 +1,4 @@
-Installation on Ubuntu 14.04.2 x64
+Installation on Ubuntu 16.04.2 x64
 ---
 
 ## Machine Features
@@ -38,12 +38,6 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
 
 
-
-
-
-
-In case that you need to rename the network interface on Ubuntu 16.04, you can follow this instructions:
-[SOURCE](https://askubuntu.com/questions/783457/renaming-network-interface-in-ubuntu-16-04-with-systemd-fails)
 
 
 
@@ -110,6 +104,10 @@ $ ip r
 
 
 NB. In case of any issues, add a rule for the firewall: "sudo ufw allow in on eth0 from 169.254.0.0/16"
+In case that you need to rename the network interface on Ubuntu 16.04, you can follow this instructions:
+[SOURCE](https://askubuntu.com/questions/783457/renaming-network-interface-in-ubuntu-16-04-with-systemd-fails)
+
+
 
 
 
