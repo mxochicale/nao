@@ -37,15 +37,18 @@ BOOKMARKS
   * [Java Services](http://doc.aldebaran.com/2-1/dev/java/index_java.html)
 
 
-
 * ROS
-  * [nao ros](http://wiki.ros.org/nao)
-  * [nao_robot](http://wiki.ros.org/nao_robot)
-  * [naoqi-driver](http://ros-naoqi.github.io/naoqi_driver/)
-  * [ros-naoqi](https://github.com/ros-naoqi)    
+  * [Main NAO ros](http://wiki.ros.org/nao)
+  * [ros-naoqi](https://github.com/ros-naoqi)
+  * [ros nao_robot](http://wiki.ros.org/nao_robot)
+  * [DOC naoqi-driver](http://ros-naoqi.github.io/naoqi_driver/)
   * [nao MoveIt](https://github.com/ros-naoqi/nao_moveit_config)
   * [Nao with moveit through python nodes](https://groups.google.com/forum/?fromgroups#!topic/ros-sig-aldebaran/bBDQRaS2u4E)
   * [ROS Indigio + NAO + MoveIT problem](https://groups.google.com/forum/?fromgroups#!topic/ros-sig-aldebaran/9fRy1nPS0jA)    
 
 
-  
+* IMAGES
+  * [head-of-nao-robot](https://openclipart.org/detail/273236/head-of-nao-robot)
+  * [fullbody](https://openclipart.org/detail/266420/Request)
+  * [nao,pepper and romeo 1](https://www.ald.softbankrobotics.com/sites/aldebaran/files/styles/638x314/public/acheter_un_robot_2.png)
+  * [nao,pepper and romeo 2](https://www.maddyness.com/wp-content/uploads/2015/11/lolo.jpg)
