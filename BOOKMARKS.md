@@ -52,3 +52,5 @@ BOOKMARKS
   * [fullbody](https://openclipart.org/detail/266420/Request)
   * [nao,pepper and romeo 1](https://www.ald.softbankrobotics.com/sites/aldebaran/files/styles/638x314/public/acheter_un_robot_2.png)
   * [nao,pepper and romeo 2](https://www.maddyness.com/wp-content/uploads/2015/11/lolo.jpg)
+  * [nao,pepper and romeo 3](https://s-media-cache-ak0.pinimg.com/originals/69/1e/16/691e16dd48addc2581984828d3f30c8b.jpg)
+  * [nao kids](https://robotstechnologyandme.files.wordpress.com/2013/10/nao-robot.jpg)
