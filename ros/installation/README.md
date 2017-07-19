@@ -36,7 +36,6 @@ sudo apt-get install ros-indigo-nao-robot
 
 
 
-
 * [nao_robot/nao_description](http://wiki.ros.org/nao_description) includes:
 * URDF (Universal Robot  Description Format): XML  describing the rigid kinematics
 * meshes
@@ -73,12 +72,9 @@ sudo apt-get install ros-indigo-nao-description
 
 
 
-
-
 ### References
 * [Slides](http://www.tech.plym.ac.uk/SoCCE/CRNS/APRIL/cefalu-event/APRIL_Cefalu_Lyubova-1.pdf)
 * [Source Code](https://github.com/nlyubova/tutorials-for-Nao-Pepper-Romeo)
-
 
 
 
