@@ -1,6 +1,19 @@
 CHECKLIST FOR THE OPENDAY DEMO AT UNIVERSITY OF BIRMINGHAM
 ---
 
+This repository is aimed to those who want to learn more about the Human-Robot
+Interaction Demo at the OpenDays at University of Birmingham. Such demo is a
+sort of dance interaction where an individual user in a face-to-face interaction
+imitates what the robot does which is basically a repetition of 10 arm upper
+movements.
+
+In order to keep anonimalised the data from the users with NAO,
+just the landmark and head pose and gaze eye estimation and internital sensor
+time series are are shared.
+
+
+One important variable is the number of version of the demo, which this time
+is v02 for the 9th of September 2017 (~/tmp/openday_v##).
 
 # Setting Up
 
@@ -10,10 +23,7 @@ CHECKLIST FOR THE OPENDAY DEMO AT UNIVERSITY OF BIRMINGHAM
 ```
 mkdir -p ~/tmp/openday_v##
 ```
-where "v##" is the number of open day. For this case the tag, it is used
-v02 since it is the second time that the data is collected from the openday
-visitors. NB. Data will be deleted or anonimalised by blurring faces in
-the videos.
+where "v##" is the number of open day.
 
 2. tune the following parameters for the ~/catkin_ws/razor_imu_9dof/config/razor*.yaml [2]
 ```
@@ -34,14 +44,15 @@ and open a terminal to execute nao's movements with the python script.
 T1
 ```
 cd ~/mxochicale/github/nao/examples/exporting_animations_to_python/python_scripts
- ./TenUpperArmMovements_FRAME_SEP_30.py
+./TenUpperArmMovements_FRAME_SEP_30.py
 ```
 The execution time for "./TenUpperArmMovements_FRAME_SEP_30.py" is 34 seconds.
 
 
-# IMUS and ROS
+# IMUS and ROS [1,2]
 1. Turn on Razor sensors
-2. bind bluetooth modules to rfcomm* ports [1]
+2. bind bluetooth modules to rfcomm* ports
+
 T2
 ```
 cd ~/mxochicale/github/ros/bluetooth_dev_conf/automatic_connection && ./bind_four_automatic_connection_ubuntu1604.sh && sleep 15
@@ -67,11 +78,9 @@ cd ~/mxochicale/github/ros/bluetooth_dev_conf/automatic_connection && ./release_
 
 4. Turn off sensors
 
-# OPENFACE
+# OPENFACE [3]
 
-[3]
-
-T4
+T3
 
 ```
 cd ~/mxochicale/github/nao/openday-uob
@@ -80,6 +89,8 @@ sleep 10 && ./openface_pNN.sh pNNgXXaNN
 sleep 10 seconds to wait for the 15 seconds for the imus to boot
 
 ctr-q to exit
+
+
 
 
 #  REFERENCES
@@ -91,14 +102,20 @@ ctr-q to exit
 
 
 ## TODO
-- [ ] create general checklist 
+- [ ] add r-scripts to read time series from both the openface and the imus sensors
+- [ ] create general checklist
+- [ ] add hypelinks to the references in the readme file
+- [ ] Check why the sensors failed. Eight persons interacted with the robot for the /openday_v02
 - [ ] change the variable /home/map479/tmp/openday_v02 for another version of the openday
 - [x] ~~create an path that collect all the data from one participant~~
 - [x] ~~define the times for the data collection, specifically for number_of_samples at razor*.yaml~~
 - [x] ~~underline todo list~~
 
 
-## OBSERVATIONS for /openday_v02
+## RECOMMENDATIONS AND OBSERVATIONS for the next /openday_v03
 
-
-*
+* When a new user start the experiment, the labels for partcipants were wrong for
+which is recommended to have a piece of paper to write down the participant number
+which might be part of the general check list.
+* It would be nice to program the robot with some voice commands while the user
+is waiting for the sensors seeting up in ROS
