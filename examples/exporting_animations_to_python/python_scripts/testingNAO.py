@@ -21,10 +21,10 @@
 """ Motion data for Markov_tickles.py
 """
 
-__author__ = "Mike McFarlane mike@mikemcfarlane.co.uk"
-__version__ = "Revision: 0.14"
-__date__ = "Date: 15-04-14"
-__copyright__ = "Copyright (c)Mike McFarlane 2014"
+__author__ = "Miguel P Xochicale"
+__version__ = "Revision: 0.01"
+__date__ = "Date: 01-02-18"
+__copyright__ = "TBC"
 __license__ = "TBC"
 
 
@@ -34,12 +34,8 @@ __license__ = "TBC"
 ##############################################################
 
 
-
-
 ##############################################################
-
 # Shake left arm in front, then open close hand.
-
 leftArmMovementList2 = [
 
 						["LElbowRoll",
@@ -136,28 +132,11 @@ upArms = [
 ##############################################################
 
 
-ArmMovementList = [leftArmMovementList2, upArms]
-# ArmMovementList = [upArms]
-# ArmMovementList = [UpperArmMovements]
+#ArmMovementList = [leftArmMovementList2, upArms]
+#ArmMovementList = [upArms]
+ArmMovementList = [leftArmMovementList2]
 
 ##############################################################
-
-
-
-##############################################################
-# SUCCESS ANIMATIONS
-##############################################################
-
-# MYSTICAL
-
-##############################################################
-# SUCCESS ANIMATION MOTION DATA LISTS
-##############################################################
-
-# successList = [mystical, airguitar, applause]
-# successList = [mystical]
-
-
 
 
 import argparse
@@ -170,15 +149,21 @@ def main(robotIP, PORT=9559):
     motion  = ALProxy("ALMotion", robotIP, PORT)
     posture = ALProxy("ALRobotPosture", robotIP, PORT)
 
-	# testList = upArms
-    # testList = leftArmMovementList
+    # For text to speech
+    tts = ALProxy("ALTextToSpeech", robotIP, PORT)
+
+    tts.setVolume(0.5)  ##Volume set to 50%
+    tts.setParameter("pitchShift", 1.2) #Applies a pitch shifting to the voice
+    tts.setParameter("doubleVoice", 0.0) #Deactivates double voice
+    tts.say("Hiya. My name is NAO and this is a simple testing where I am moving my left arm and hand.") 
+
+
+
     testList = ArmMovementList
 
     bezier = True
 
     motion.wakeUp()
-    # posture.goToPosture("StandInit", 0.8)
-
 
     for i in range(len(testList)):
         names = list()
@@ -195,11 +180,11 @@ def main(robotIP, PORT=9559):
         else:
             motion.angleInterpolation(names, keys, times, True)
 
+  
+    motion.rest() # Go to rest position 
 
-    # Go to rest position
-    motion.rest()
 
-
+    tts.say("Bye-bye")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
