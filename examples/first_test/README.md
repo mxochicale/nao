@@ -21,8 +21,8 @@ and then you will get a message saying that the connection has been established
 ```
 which NAO gives a message and shake its left arm and open close its hand.
 
-* [ ] 4. Turnning NAO off. Make sure NAO is in a safe position and press the Chest button 
-for 3 seconds, until NAO says "GNUK GNUK". 
+* [ ] 4. Turnning NAO off. Make sure NAO is in a safe position and press the Chest button
+ until NAO says "GNUK GNUK". 
 The shutdown process takes approximately 18 seconds.
 
 * [ ] 5. (optional) if your computer has only got one Ethernet port,
