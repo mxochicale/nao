@@ -17,7 +17,16 @@ The robot's development began with the launch of Project Nao in 2004
 * Torso Model
 [MODEL T14](http://doc.aldebaran.com/2-1/family/body_type.html#nao-t14)  
 
+
+# clone github repo
+```
+mkdir $HOME/hri && cd $HOME/hri
+git clone https://github.com/mxochicale/nao
+cd nao
+```
+
+
 # Installation
-* Explore [:link:](https://github.com/mxochicale/nao/tree/master/installation) for installation
-in different machines: Ubuntu14.04-64b, Ubuntu16.04-64b (desktop) and Ubuntu 16.04-64b (server).
+* Explore [Installation path](https://github.com/mxochicale/nao/tree/master/installation) for installation
+of nao software in different machines: Ubuntu14.04-64b, Ubuntu16.04-64b (desktop) and Ubuntu 16.04-64b (server).
 
